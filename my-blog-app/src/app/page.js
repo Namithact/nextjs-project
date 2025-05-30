@@ -1,3 +1,4 @@
+import Link from 'next/link';
 export default function HomePage() {
   return (
     <main className="max-w-3xl mx-auto p-6 text-center">
@@ -14,12 +15,12 @@ export default function HomePage() {
         with the community.
       </p>
 
-      <a
+      <Link
         href="/blog"
         className="inline-block bg-blue-600 text-white px-6 py-3 rounded-md hover:bg-blue-700 transition"
       >
         Explore Blog Posts
-      </a>
+      </Link>
     </main>
   );
 }
