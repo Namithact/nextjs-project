@@ -1,36 +1,49 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# 🔐 AuthVault
 
-## Getting Started
+**AuthVault** is a secure authentication app built with **Next.js (App Router)** and **Firebase Authentication**. This project was part of my journey into mastering full-stack capabilities with modern React tools.
 
-First, run the development server:
+🔗 **Live Demo:** [Visit AuthVault](https://authvault-1.web.app/)
+
+---
+
+## ✅ Features
+
+- **User Registration & Login** – Secure signup and signin via Firebase Authentication  
+- **Password Reset** – Easy email-based password recovery  
+- **Protected Routes** – Dashboard accessible only to authenticated users  
+- **Logout Functionality** – Securely end sessions with a single click  
+- **Modern UI** – Built with **Tailwind CSS** and the new **Next.js App Router**  
+- **Deployed on Firebase Hosting** – Fast, reliable, and accessible online  
+
+---
+
+## 🧠 What I Learned
+
+This project helped me deepen my understanding of:
+
+🔹 Next.js **App Router** (Pages vs. App directory concepts)  
+🔹 Client-side authentication logic and route protection  
+🔹 Integrating Firebase Auth with modern React/Next.js apps  
+🔹 Building scalable and secure auth flows  
+
+---
+
+## 🛠️ Tech Stack
+
+- **Next.js (App Router)**
+- **React**
+- **Firebase Authentication**
+- **Tailwind CSS**
+- **Firebase Hosting**
+
+---
+
+## 📦 Getting Started
+
+To run the project locally:
 
 ```bash
+git clone https://github.com/your-username/authvault.git
+cd authvault
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
-
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
