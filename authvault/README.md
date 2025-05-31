@@ -43,7 +43,7 @@ This project helped me deepen my understanding of:
 To run the project locally:
 
 ```bash
-git clone https://github.com/your-username/authvault.git
+git clone https://github.com/Namithact/authvault.git
 cd authvault
 npm install
 npm run dev
