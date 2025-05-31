@@ -19,7 +19,7 @@ A full-stack Markdown-based blog built with Next.js (App Router), with an admin 
 ## 📦 Getting Started
 
 ```bash
-git clone https://github.com/your-username/devblog.git
+git clone https://github.com/Namithact/devblog.git
 cd devblog
 npm install
 npm run dev
