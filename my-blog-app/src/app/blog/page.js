@@ -1,5 +1,6 @@
 
 import Link from 'next/link';
+import removeMarkdown from 'remove-markdown'
 export default async function BlogList() {
   const baseUrl = process.env.NEXT_PUBLIC_BASE_URL;
 
@@ -18,7 +19,7 @@ export default async function BlogList() {
         {posts.map((post) => (
           <div key={post.id} className="p-4 border rounded-md shadow-sm hover:shadow-md transition">
             <h2 className="text-xl font-semibold mb-2">{post.title}</h2>
-            <p className="text-gray-700 mb-2">{post.content.slice(0, 100)}...</p>
+            <p className="text-gray-700 mb-2">{removeMarkdown(post.content).slice(0, 100)}...</p>
             <Link href={`/blog/${post.slug}`} className="text-blue-600 hover:underline">
               Read more
             </Link>
