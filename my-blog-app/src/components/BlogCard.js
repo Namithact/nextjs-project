@@ -18,11 +18,9 @@ export default function BlogCard({ initialPosts, session }) {
       }
 
       const result = await response.json();
-      console.log("Delete success:", result.message);
       setPosts((prevPosts) => prevPosts.filter((post) => post.slug !== slug));
       // You can update UI here after successful deletion
     } catch (error) {
-      console.error("Error deleting post:", error.message);
       // Show error message in UI if needed
     }
   }

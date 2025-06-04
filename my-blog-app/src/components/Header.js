@@ -5,7 +5,6 @@ import Link from "next/link";
 import { useSession } from "next-auth/react";
 export default function Header() {
       const { data: session, status } = useSession();
-      console.log(status)
   return (
     <>
     <header className="bg-gray-800 text-white p-4">
