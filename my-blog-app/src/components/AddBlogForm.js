@@ -1,15 +1,17 @@
 "use client";
 import { useForm } from 'react-hook-form';
 import { useState } from "react";
+import Popup from './PopUp';
 
 export default function AddBlogForm() {
   const [showForm, setShowForm] = useState(false);
-  const { register, handleSubmit } = useForm();
+  const { register, handleSubmit ,reset } = useForm();
+  const [popUp,setPopUp]=useState({message:'',isError:false})
   const baseUrl = process.env.NEXT_PUBLIC_BASE_URL;
   const onSubmit = async (data) => {
     console.log(data)
    try{
-    const response = fetch(`${baseUrl}/api/post`,{
+    const response = await fetch(`${baseUrl}/api/post`,{
       method:'POST',
       headers:{ 'Content-Type': 'application/json' },
       body:JSON.stringify(data),
@@ -18,10 +20,14 @@ export default function AddBlogForm() {
       throw new Error('failed to submit')
     }
     const result= await response.json();
-    console.log(result);
+    setPopUp({message:"Blog Submitted successfully!",isError:false})
+    setShowForm(false);
    }
    catch(error){
-    console.log(error)
+    setPopUp({message:"failed to submit!",isError:true})
+   }
+   finally{
+     reset(); 
    }
    
   }
@@ -72,6 +78,7 @@ export default function AddBlogForm() {
           </button>
         </form>
       )}
+      <Popup message={popUp.message} isError={popUp.isError} onClose={()=>setPopUp({message:'',isError:false})}></Popup>
     </div>
   );
 }
