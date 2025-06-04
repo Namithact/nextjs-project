@@ -9,7 +9,6 @@ export default function AddBlogForm() {
   const [popUp,setPopUp]=useState({message:'',isError:false})
   const baseUrl = process.env.NEXT_PUBLIC_BASE_URL;
   const onSubmit = async (data) => {
-    console.log(data)
    try{
     const response = await fetch(`${baseUrl}/api/post`,{
       method:'POST',
