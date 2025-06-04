@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 export default function Header() {
   return (
     <>
@@ -18,9 +19,8 @@ export default function Header() {
             <nav>
             
                 <ul className="flex space-x-4">
-                    <li><a href="/" className="hover:underline">Home</a></li>
-                    <li><a href="/about" className="hover:underline">About</a></li>
-                    <li><a href="/contact" className="hover:underline">Contact</a></li>
+                    <li><Link href="/" className="hover:underline">Home</Link></li>
+                    <li><Link href="/login" className="hover:underline">Login</Link></li>
                 </ul>
             </nav>
         </div>

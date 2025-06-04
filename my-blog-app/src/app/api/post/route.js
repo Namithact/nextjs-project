@@ -1,4 +1,5 @@
 import { PrismaClient } from "@prisma/client";
+import slugify from 'slugify';
 const prisma = new PrismaClient();
 export async function GET() {
     try{
@@ -16,7 +17,8 @@ export async function GET() {
 }
 export async function POST(request) {
     try{
-        const{title,content,slug}  = await request.json(request);
+        const{title,content}  = await request.json();
+        const slug = slugify(title, { lower: true, strict: true });
         const newPost = await prisma.post.create({
             data: {
                 title,

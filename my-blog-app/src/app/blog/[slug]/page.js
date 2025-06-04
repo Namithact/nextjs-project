@@ -3,12 +3,10 @@ import ReactMarkdown from 'react-markdown'
 export default async function BlogPage({ params }) {
   const { slug } = await params;
   const baseUrl = process.env.NEXT_PUBLIC_BASE_URL;
-  console.log("Blog page params:", slug);
   const response = await fetch(`${baseUrl}/api/post/${slug}`, {
     cache: "no-store",
   });
   const posts = await response.json();
-  console.log("response", posts);
   if (!posts) return <div className="text-center mt-10">Loading...</div>;
 
   const formattedDate = new Date(posts.createdAt).toLocaleDateString();
