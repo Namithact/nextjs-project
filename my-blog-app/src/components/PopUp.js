@@ -7,9 +7,9 @@ export default function Popup({ message, isError, onClose }) {
     <div
       className={`fixed inset-0 z-50 flex items-center justify-center`}
       style={{
-        backdropFilter: "blur(5px)", // apply blur
+        backdropFilter: "blur(5px)", 
         WebkitBackdropFilter: "blur(5px)", // for Safari support
-        backgroundColor: "rgba(255, 255, 255, 0.2)", // subtle light overlay (optional)
+        backgroundColor: "rgba(255, 255, 255, 0.2)", 
       }}
       role="alert"
       aria-live="assertive"
