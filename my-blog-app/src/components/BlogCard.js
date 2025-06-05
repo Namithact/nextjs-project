@@ -11,6 +11,7 @@ export default function BlogCard({ initialPosts, session }) {
       const response = await fetch(`${baseUrl}/api/post/${slug}`, {
         method: "DELETE",
         cache: "no-store",
+        credentials: "include",
       });
 
       if (!response.ok) {

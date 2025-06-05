@@ -6,6 +6,7 @@ export default async function BlogList() {
   const session = await getServerSession(authOptions);
   const res = await fetch(`${baseUrl}/api/post`, {
     cache: "no-store",
+    credentials: "include",
   });
   if (!res.ok) {
     throw new Error("Failed to fetch posts");

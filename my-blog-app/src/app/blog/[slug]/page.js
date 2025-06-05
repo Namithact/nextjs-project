@@ -5,6 +5,7 @@ export default async function BlogPage({ params }) {
   const baseUrl = process.env.NEXT_PUBLIC_BASE_URL;
   const response = await fetch(`${baseUrl}/api/post/${slug}`, {
     cache: "no-store",
+    credentials: "include",
   });
   const posts = await response.json();
   if (!posts) return <div className="text-center mt-10">Loading...</div>;
