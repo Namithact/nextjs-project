@@ -4,6 +4,8 @@ import BlogCard from "@/components/BlogCard";
 export default async function BlogList() {
   const baseUrl = process.env.NEXT_PUBLIC_BASE_URL;
   const session = await getServerSession(authOptions);
+  console.log(process.env.NEXT_PUBLIC_BASE_URL)
+  console.log(baseUrl);
   const res = await fetch(`${baseUrl}/api/post`, {
     cache: "no-store",
     credentials: "include",
